@@ -1,0 +1,9 @@
+fos_rest:
+    versioning:
+        enabled: true
+        default_version: v1
+    view:
+        view_response_listener: 'force'
+        formats:
+            json: true
+            xml: true

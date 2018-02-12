@@ -1,0 +1,17 @@
+services:
+    rest_api.event_listener.check_token:
+        class: Rest\ApiBundle\EventListener\TokenListener
+        arguments:
+            - "@cache.app"
+        tags:
+          - { name: kernel.event_listener, event: kernel.request, method: onTokenEvent, priority: 255 }
+        public: false
+
+    rest_api.event_listener.auth:
+        class: Rest\ApiBundle\EventListener\AuthListener
+        arguments:
+            - "@doctrine.orm.entity_manager"
+            - "@security.token_storage"
+        tags:
+          - { name: kernel.event_listener, event: kernel.request, method: onAuthEvent, priority: 254 }
+        public: false

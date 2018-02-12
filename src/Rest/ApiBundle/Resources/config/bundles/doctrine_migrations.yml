@@ -1,0 +1,6 @@
+doctrine_migrations:
+    dir_name: "%kernel.root_dir%/../src/Rest/ApiBundle/DoctrineMigrations"
+    namespace: Rest\ApiBundle\DoctrineMigrations
+    table_name: migration_versions
+    name: "%app_name% Migrations"
+    organize_migrations: false

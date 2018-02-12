@@ -1,0 +1,14 @@
+rest_api_uses:
+    type: rest
+    resource: "@RestApiBundle/Controller/UsersController.php"
+    name_prefix: rest_api_users_
+
+rest_api_campaign_type:
+    type: rest
+    resource: "@RestApiBundle/Controller/CampaignTypeController.php"
+    name_prefix: rest_api_campaign_type_
+
+rest_api_campaign:
+    type: rest
+    resource: "@RestApiBundle/Controller/CampaignController.php"
+    name_prefix: rest_api_campaign_

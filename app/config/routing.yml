@@ -1,0 +1,11 @@
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /api/doc
+
+rest_api:
+    type: rest
+    resource: "@RestApiBundle/Resources/config/routing.yml"
+    prefix:   /api/{version}
